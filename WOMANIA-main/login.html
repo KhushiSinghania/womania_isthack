@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" , shrink-to-fit="no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+</head>
+
+<body>
+    <section>
+        <div class="box">
+            <div class="form">
+                <h2>Login</h2>
+                <form method="POST" id="loginform">
+                    <div class="inputtext">
+                        <input type="email" value="" id="loginemail" placeholder="Email" required />
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="inputtext">
+                        <input type="password" value="" id="loginpassword" placeholder="Password" required />
+                        <i class="fa fa-lock"></i>
+                    </div>
+                    <div class="inputtext">
+                        <input type="Submit" value="Login">
+                    </div>
+                </form>
+                <p>Forgot <a href="#">Password</a>?</p>
+                <p>Need an <a href="index.html">Account</a></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBL7b9U4yD9f1UBgS2ccbsARrW8tEkvBDI",
+            authDomain: "womania-4e8d3.firebaseapp.com",
+            projectId: "womania-4e8d3",
+            storageBucket: "womania-4e8d3.appspot.com",
+            messagingSenderId: "615860964819",
+            appId: "1:615860964819:web:2d0a81b1c25d929daef326",
+            measurementId: "G-ZRCB47KFPQ"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="js/login.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
